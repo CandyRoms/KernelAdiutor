@@ -212,7 +212,7 @@ public class Thermal implements Constants {
 
     public static int getTempLimitMin() {
         if (TEMP_LIMIT_FILE.equals(TEMPCONTROL_TEMP_LIMIT)) return 60;
-        return 40;
+        return 30;
     }
 
     public static List<String> getTempLimitList() {

@@ -395,12 +395,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedLowLow()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedLowLowCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedLowLowCard.setTitle(getString(R.string.allowed_low_low));
-            mAllowedLowLowCard.setProgress(Thermal.getAllowedLowLow() - 40);
+            mAllowedLowLowCard.setProgress(Thermal.getAllowedLowLow() - 30);
             mAllowedLowLowCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedLowLowCard);
@@ -408,12 +408,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedLowHigh()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedLowHighCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedLowHighCard.setTitle(getString(R.string.allowed_low_high));
-            mAllowedLowHighCard.setProgress(Thermal.getAllowedLowHigh() - 40);
+            mAllowedLowHighCard.setProgress(Thermal.getAllowedLowHigh() - 30);
             mAllowedLowHighCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedLowHighCard);
@@ -433,12 +433,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedMidLow()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedMidLowCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedMidLowCard.setTitle(getString(R.string.allowed_mid_low));
-            mAllowedMidLowCard.setProgress(Thermal.getAllowedMidLow() - 40);
+            mAllowedMidLowCard.setProgress(Thermal.getAllowedMidLow() - 30);
             mAllowedMidLowCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedMidLowCard);
@@ -446,12 +446,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedMidHigh()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedMidHighCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedMidHighCard.setTitle(getString(R.string.allowed_mid_high));
-            mAllowedMidHighCard.setProgress(Thermal.getAllowedMidHigh() - 40);
+            mAllowedMidHighCard.setProgress(Thermal.getAllowedMidHigh() - 30);
             mAllowedMidHighCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedMidHighCard);
@@ -471,12 +471,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedMaxLow()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedMaxLowCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedMaxLowCard.setTitle(getString(R.string.allowed_max_low));
-            mAllowedMaxLowCard.setProgress(Thermal.getAllowedMaxLow() - 40);
+            mAllowedMaxLowCard.setProgress(Thermal.getAllowedMaxLow() - 30);
             mAllowedMaxLowCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedMaxLowCard);
@@ -484,12 +484,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasAllowedMaxHigh()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mAllowedMaxHighCard = new SeekBarCardView.DSeekBarCard(list);
             mAllowedMaxHighCard.setTitle(getString(R.string.allowed_max_high));
-            mAllowedMaxHighCard.setProgress(Thermal.getAllowedMaxHigh() - 40);
+            mAllowedMaxHighCard.setProgress(Thermal.getAllowedMaxHigh() - 30);
             mAllowedMaxHighCard.setOnDSeekBarCardListener(this);
 
             views.add(mAllowedMaxHighCard);
@@ -521,12 +521,12 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
 
         if (Thermal.hasShutdownTemp()) {
             List<String> list = new ArrayList<>();
-            for (double i = 40; i < 101; i++)
+            for (double i = 30; i < 101; i++)
                 list.add(Utils.formatCelsius(i) + " " + Utils.celsiusToFahrenheit(i));
 
             mShutdownFreqCard = new SeekBarCardView.DSeekBarCard(list);
             mShutdownFreqCard.setTitle(getString(R.string.shutdown_temp));
-            mShutdownFreqCard.setProgress(Thermal.getShutdownTemp() - 40);
+            mShutdownFreqCard.setProgress(Thermal.getShutdownTemp() - 30);
             mShutdownFreqCard.setOnDSeekBarCardListener(this);
 
             views.add(mShutdownFreqCard);
@@ -589,23 +589,23 @@ public class ThermalFragment extends RecyclerViewFragment implements SwitchCardV
         else if (dSeekBarCard == mThermalLimitHighCard)
             Thermal.setThermalLimitHigh(position + 1, getActivity());
         else if (dSeekBarCard == mTempLimitCard)
-            Thermal.setTempLimit(position + 40, getActivity());
+            Thermal.setTempLimit(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedLowLowCard)
-            Thermal.setAllowedLowLow(position + 40, getActivity());
+            Thermal.setAllowedLowLow(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedLowHighCard)
-            Thermal.setAllowedLowHigh(position + 40, getActivity());
+            Thermal.setAllowedLowHigh(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedMidLowCard)
-            Thermal.setAllowedMidLow(position + 40, getActivity());
+            Thermal.setAllowedMidLow(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedMidHighCard)
-            Thermal.setAllowedMidHigh(position + 40, getActivity());
+            Thermal.setAllowedMidHigh(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedMaxLowCard)
-            Thermal.setAllowedMaxLow(position + 40, getActivity());
+            Thermal.setAllowedMaxLow(position + 30, getActivity());
         else if (dSeekBarCard == mAllowedMaxHighCard)
-            Thermal.setAllowedMaxHigh(position + 40, getActivity());
+            Thermal.setAllowedMaxHigh(position + 30, getActivity());
         else if (dSeekBarCard == mCheckIntervalMsCard)
             Thermal.setCheckIntervalMs(position * 50, getActivity());
         else if (dSeekBarCard == mShutdownFreqCard)
-            Thermal.setShutdownTemp(position + 40, getActivity());
+            Thermal.setShutdownTemp(position + 30, getActivity());
         else if (dSeekBarCard == mFrancoThermalStepCard)
             Thermal.setFrancoThermalStep(position, getActivity());
     }
